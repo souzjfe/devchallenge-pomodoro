@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="scripts/js" href="./scripts/home.js">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+
+<body>
+
     <h1>Pomodoro</h1>
     <div>
-      <section>
-        <aside>
-          <span id="up">⬆</span>
-          <span id="down">⬇</span>
-          <input type="text" value="0" disabled />
-        </aside>
-        <legend>Trabalho</legend>
-      </section>
-      <section>
-        <aside>
-          <span id="up">⬆</span>
-          <span id="down">⬇</span>
-          <input type="text" value="0" disabled />
-        </aside>
-        <legend>Trabalho</legend>
-      </section>
-      <section>
-        <aside>
-          <span id="up">⬆</span>
-          <span id="down">⬇</span>
-          <input type="text" value="0" disabled />
-        </aside>
-        <legend>Trabalho</legend>
-      </section>
+        <section>
+            <aside>
+                <button id="up_trabalho">⬆</button>
+                <button id="down_trabalho">⬇</button>
+            </aside>
+            <input type="number" value="0" disabled />
+            <legend>Trabalho</legend>
+        </section>
+        <section>
+            <aside>
+                <button id="up_pause">⬆</button>
+                <button id="down_pause">⬇</button>
+            </aside>
+            <input type="number" value="0" disabled />
+            <legend>Pausa</legend>
+        </section>
+        <section>
+            <aside>
+                <button id="up_session">⬆</button>
+                <button id="down_session">⬇</button>
+            </aside>
+            <input type="number" value="0" disabled />
+            <legend>Sessões</legend>
+        </section>
     </div>
-    <a href="/pomodoro.html">Continuar</a>
-  </body>
+    <a href="/timer.html">Continuar</a>
+
+
+    <script src="./scripts/home.js"></script>
+</body>
+
 </html>
