@@ -1,13 +1,15 @@
-cronometer = document.getElementById('cronometer')
-const minutesWork = localStorage.getItem('timer').split(',')[0]
-const minutesPause = localStorage.getItem('timer').split(',')[1]
-const session = localStorage.getItem('timer').split(',')[2]
-cronometer.value = minutesWork < 10 ? '0' + minutesWork + ':00' : minutesWork + ':00'
-var pause = false
+const cronometer = document.getElementById("cronometer");
+const minutesWork = localStorage.getItem("timer").split(",")[0];
+const minutesPause = localStorage.getItem("timer").split(",")[1];
+const session = localStorage.getItem("timer").split(",")[2];
+cronometer.value =
+  minutesWork < 10 ? "0" + minutesWork + ":00" : minutesWork + ":00";
+var pause = false;
 
 function startTimer(session) {
   let timer = minutesWork * 60,
-    minutes, seconds;
+    minutes,
+    seconds;
   setInterval(() => {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
@@ -24,15 +26,14 @@ function startTimer(session) {
 }
 
 function toggle() {
-  pause = !pause
+  pause = !pause;
 }
-
 
 window.onload = () => {
   startTimer(session);
-  document.addEventListener('click', ({ target }) => {
-    if (target.id == 'play_pause') {
-      toggle()
+  document.addEventListener("click", ({ target }) => {
+    if (target.id === "play_pause") {
+      toggle();
     }
-  })
+  });
 };
